@@ -83,9 +83,9 @@ public class ArrayDeque<T> {
             resize(items.length / 2);
         }
 
-        T toRemove = items[head];
+        T toRemove = items[(head + size - 1) % items.length];
         items[(head + size - 1) % items.length] = null;
-        head = (head + 1) % items.length;
+     
         if (!isEmpty()){
             size -= 1;
         }
