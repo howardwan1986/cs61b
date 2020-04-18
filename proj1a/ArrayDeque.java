@@ -34,7 +34,7 @@ public class ArrayDeque<T> {
         return items[ (head + index) % (items.length) ];
     }
 
-    public void resize(int capacity){
+    private void resize(int capacity){
         T[] new_items = (T[]) new Object[capacity];
 
         for(int i = 0; i < size; i++){
